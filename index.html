@@ -7,6 +7,7 @@
   <title>Index - TheEvent Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
+  <script src="assets/js/alpinejs@3.12.0" defer></script>  
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -218,10 +219,14 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Event Schedule<br></h2>
+
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
 
-      <div class="container">
+      <div class="container" x-data="{ message: 'Hello, World!', fetchData() { 
+        fetch('http://127.0.0.1:3000/campaigns')
+          .then(response => response.json())
+          .then(data => this.message = data.message); } }">
 
         <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
           <li class="nav-item">
@@ -241,6 +246,7 @@
 
           <!-- Schdule Day 1 -->
           <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+            <p x-text="message"></p>
 
             <div class="row schedule-item">
               <div class="col-md-2"><time>09:30 AM</time></div>
@@ -462,7 +468,7 @@
 
         </div>
 
-      </div>
+      </>
     </section><!-- /Schedule Section -->
 
     <!-- Venue Section -->
@@ -1056,17 +1062,93 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
-
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/actioncable@5.2.8-1/lib/assets/compiled/action_cable.min.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      fetchData();
+    });
+  
+    async function fetchData() {
+      // Define the email and password
+      const email = "kinyodaniel@gmail.com";  // Replace with actual email
+      const password = "password";    // Replace with actual password
+  
+      // Prepare the data to be sent in the POST request
+      const requestData = {
+        email: email,
+        password: password,
+      };
+  
+      // Define the Authorization token (if you already have it)
+      const authToken = "your_jwt_token_here";  // Replace with your actual token
+  
+      try {
+        const response = await fetch("http://127.0.0.1:3000/api/v1/campaigns", {
+          method: "GET",  // Change to POST request
+          headers: {
+            "Content-Type": "application/json", // Ensure the server understands the JSON payload
+            "Authorization": `Bearer ${authToken}`, // Set the Authorization header
+          },
+          // body: JSON.stringify(requestData),  // Send email and password as JSON in the request body
+        });
+  
+        // If the response is successful, process the data
+        if (response.ok) {
+          const data = await response.json();
+          console.log(data);  // Handle the response
+          // You can update the DOM or use the data as needed
+        } else {
+          console.error("Failed to fetch data:", response.statusText);
+        }
+      } catch (error) {
+        console.error("Error occurred:", error);
+      }
+    }
 
+    const socket = new WebSocket('wss://your-websocket-server.com');
+
+    socket.onmessage = function(event) {
+      const data = JSON.parse(event.data);
+      console.log(data);
+      // document.getElementById('content').textContent = data.message;  // Assuming response has a 'message' field
+    };
+
+    socket.onerror = function(error) {
+      console.log(data);
+      // document.getElementById('content').textContent = 'WebSocket error.';
+    };
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const cable = ActionCable.createConsumer("ws://localhost:3000/cable");
+
+    // Subscribe to the DataChannel
+    const dataChannel = cable.subscriptions.create("DataChannel", {
+      connected() {
+        console.log("Connected to DataChannel");
+      },
+      disconnected() {
+        console.log("Disconnected from DataChannel");
+      },
+      received(data) {
+        console.log("Data received:", data);
+        // Update the DOM with the received data
+        // Example: document.getElementById("content").textContent = data.message;
+      }
+    });
+  });
+
+
+  </script>
+  
+
+</body>
 </html>
