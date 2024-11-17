@@ -1073,30 +1073,102 @@
   <script src="assets/js/main.js"></script>
 
   <script>
+  let response_identifer = null
+
+  function getCurrentPosition() {
+
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          console.log("Latitude:", position.coords.latitude);
+          console.log("Longitude:", position.coords.longitude);
+          // Send this to your API
+          return {
+            latitude: position.coords.latitudet,
+            longitude: position.coords.latitude, 
+            };
+        },
+        error => {
+          console.error("Geolocation error:", error);
+          return {
+            latitude: null,
+            longitude: null, 
+            };
+        }
+      );
+    }
+
+    getCurrentPosition() 
+
+    function generateRandomToken(length = 32) {
+      // Create a random array of values
+      const array = new Uint8Array(length);
+      window.crypto.getRandomValues(array);
+      
+      // Convert the array to a hexadecimal string (a hash-like format)
+      return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+    }
+
+    let token = generateRandomToken(32); // Generate a 32-byte token
+    console.log(token); // Log the random token
+
     document.addEventListener("DOMContentLoaded", function() {
       fetchData();
     });
   
+    function setCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    }
+
+    function getBrowserData() {
+      return {
+        userAgent: navigator.userAgent,
+        language: navigator.language,
+        platform: navigator.platform,
+        cookieEnabled: navigator.cookieEnabled,
+        screenWidth: window.screen.width,
+        screenHeight: window.screen.height,
+        colorDepth: window.screen.colorDepth,
+        timezoneOffset: new Date().getTimezoneOffset(),
+      };
+    }
+
+    console.log(getBrowserData());
+
     async function fetchData() {
       // Define the email and password
-      const email = "kinyodaniel@gmail.com";  // Replace with actual email
+      const userAgent = "kinyodaniel@gmail.com";  // Replace with actual email
       const password = "password";    // Replace with actual password
   
       // Prepare the data to be sent in the POST request
       const requestData = {
-        email: email,
-        password: password,
+        userAgent: getBrowserData(),
+        geolocation: "",
+        token: token
       };
-  
-      // Define the Authorization token (if you already have it)
-      const authToken = "your_jwt_token_here";  // Replace with your actual token
-  
+
+      // const jsonString = null
+      // if(!response_identifer){
+      const jsonString = JSON.stringify(requestData);
+
+      // }else{
+      //   console.log("response_identifer")
+      //   console.log(response_identifer)
+      // }
+      console.log("response_identifer")
+      console.log(response_identifer)
+
       try {
         const response = await fetch("http://127.0.0.1:3000/api/v1/campaigns", {
           method: "GET",  // Change to POST request
           headers: {
             "Content-Type": "application/json", // Ensure the server understands the JSON payload
-            "Authorization": `Bearer ${authToken}`, // Set the Authorization header
+            "Authorization": jsonString, // Set the Authorization header
           },
           // body: JSON.stringify(requestData),  // Send email and password as JSON in the request body
         });
@@ -1114,7 +1186,12 @@
       }
     }
 
-    const socket = new WebSocket('wss://your-websocket-server.com');
+    websocket_1 = "ws://https://public-participation-forum-frontend-m1keoixcm.vercel.app/api/v1/cable"
+    websocket_2 = "http://localhost:3000/api/v1/cable"
+    socket_1 = 'ws://https://public-participation-forum-frontend-m1keoixcm.vercel.app'
+    socket_2 = "http://localhost:3000"
+
+    const socket = new WebSocket(socket_2);
 
     socket.onmessage = function(event) {
       const data = JSON.parse(event.data);
@@ -1128,26 +1205,29 @@
     };
 
     document.addEventListener("DOMContentLoaded", function() {
-    const cable = ActionCable.createConsumer("ws://localhost:3000/cable");
+      const cable = ActionCable.createConsumer(websocket_2);
 
-    // Subscribe to the DataChannel
-    const dataChannel = cable.subscriptions.create("DataChannel", {
-      connected() {
-        console.log("Connected to DataChannel");
-      },
-      disconnected() {
-        console.log("Disconnected from DataChannel");
-      },
-      received(data) {
-        console.log("Data received:", data);
-        // Update the DOM with the received data
-        // Example: document.getElementById("content").textContent = data.message;
-      }
-    });
+      // Subscribe to the DataChannel
+      const dataChannel = cable.subscriptions.create("DataChannel", {
+        connected() {
+          console.log("Connected to DataChannel");
+        },
+        disconnected() {
+          console.log("Disconnected from DataChannel");
+        },
+        received(data) {
+          console.log("Data received:", data.message);
+          response_identifer = data
+          localStorage.setItem(token, response_identifer);
+          // Update the DOM with the received data
+          // Example: document.getElementById("content").textContent = data.message;
+        }
+      });
+      console.log(dataChannel);
+   
   });
 
-
-  </script>
+</script>
   
 
 </body>
