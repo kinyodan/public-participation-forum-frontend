@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - TheEvent Bootstrap Template</title>
+  <title>Index - The Public Participation Forum</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <script src="assets/js/alpinejs@3.12.0" defer></script>  
+  <script src="https://kit.fontawesome.com/0ed3c34988.js" crossorigin="anonymous"></script>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -17,6 +18,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +45,8 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/logo.png" alt="">
+        <img src="assets/img/Designer-9.jpg" alt="">
+        <h4>The Public Participation Forum</h4>
         <!-- Uncomment the line below if you also wish to use an text logo -->
         <!-- <h1 class="sitename">TheEvent</h1>  -->
       </a>
@@ -51,34 +54,12 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home<br></a></li>
-          <li><a href="#speakers">Speakers</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#venue">Venue</a></li>
-          <li><a href="#hotels">Hotels</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="cta-btn d-none d-sm-block" href="#buy-tickets">Buy Tickets</a>
+      <a class="cta-btn d-none d-sm-block" href="#schedule">Start participating</a>
 
     </div>
   </header>
@@ -88,797 +69,443 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
+      <img src="assets/img/wambui-ESmWYVFII9I-unsplash.jpg" alt="" data-aos="fade-in" class="">
 
-      <div class="container d-flex flex-column align-items-center text-center mt-auto">
-        <h2 data-aos="fade-up" data-aos-delay="100" class="">THE ANNUAL<br><span>MARKETING</span> CONFERENCE</h2>
-        <p data-aos="fade-up" data-aos-delay="200">10-12 December, Downtown Conference Center, New York</p>
+      <div class="container d-flex flex-column align-items-center text-center call-to-action mt-auto">
+
+        <h2 data-aos="fade-up" data-aos-delay="100" class="">ENHANCING PUBLIC PARTICIPATION IN GOVERNANCE, 
+          <br><span>AS OUTLINED BY THE CONSTITUTION OF KENYA 2010.</span> </h2>
+        <p data-aos="fade-up" data-aos-delay="200">Kenya is our country and our responsibility.  </p>
+
+        <a class="cta-btn d-none take-me-there d-sm-block" href="#schedule">Take me there</a>
+
         <div data-aos="fade-up" data-aos-delay="300" class="">
-          <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn mt-3"></a>
+
+          <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn mt-3"></a> -->
         </div>
+      
       </div>
 
       <div class="about-info mt-auto position-relative">
 
         <div class="container position-relative" data-aos="fade-up">
+          
           <div class="row">
             <div class="col-lg-6">
-              <h2>About The Event</h2>
-              <p>Sed nam ut dolor qui repellendus iusto odit. Possimus inventore eveniet accusamus error amet eius aut
-                accusantium et. Non odit consequatur repudiandae sequi ea odio molestiae. Enim possimus sunt inventore in
-                est ut optio sequi unde.</p>
+              <h2>About us</h2>
+              <p>The Public Participation Forum focuses on enhancing public participation in governance,as outlined by the Constitution of Kenya 2010.
+                It introduces a streamlined approach for submitting views on laws under consideration by the Kenyan Parliament, 
+                as well as on government initiatives or policies that require public input. By providing comprehensive information,
+                the aim is to ensure that all voices are heard in decisions made by the Legislature, Executive, Judiciary and other government bodies..</p>
             </div>
             <div class="col-lg-3">
-              <h3>Where</h3>
-              <p>Downtown Conference Center, New York</p>
+              <h3></h3>
+              <p></p>
             </div>
             <div class="col-lg-3">
-              <h3>When</h3>
-              <p>Monday to Wednesday<br>10-12 December</p>
+              Photo by <a href="https://unsplash.com/@soph_?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Wambui</a> on <a href="https://unsplash.com/photos/a-bridge-with-a-city-in-the-background-ESmWYVFII9I?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
             </div>
           </div>
         </div>
+        
       </div>
 
     </section><!-- /Hero Section -->
 
-    <!-- Speakers Section -->
-    <section id="speakers" class="speakers section">
+    <!-- Modal Container (Initially hidden) -->
+    <div class="campaign-content-modal">
+      <div id="modal" class="modal ">
+        <div class="modal-content">
+          <span id="close-btn" class="close-btn  d-flex align-items-center justify-content-center">
+            &times;
+          </span>
+          <h3 id="modal-title" ></h3>
 
+          <!-- You can also include forms or other content here -->
+
+          <section id="faq" class="faq section">
+            <div class="faq-container" id="faq-section"></div>
+
+              <div class="row">
+
+                                                      <div class="col">
+                                                        <div data-aos="fade-up" data-aos-delay="100">
+
+                                                                      <div class="formbold-main-wrapper">
+                                                                        <!-- Author: FormBold Team -->
+                                                                        <!-- Learn More: https://formbold.com -->
+                                                                        <div class="formbold-form-wrapper">
+                                                                      
+                                                                          <form id="responseForm" method="POST">
+                                                                      
+                                                                            <div class="formbold-input-flex">
+                                                                              <div>
+                                                                                <label for="firstname" class="formbold-form-label">
+                                                                                  First name
+                                                                                </label>
+                                                                                <input
+                                                                                  type="text"
+                                                                                  name="firstname"
+                                                                                  id="firstname"
+                                                                                  class="formbold-form-input first-name"
+                                                                                />
+                                                                              </div>
+                                                                              <div>
+                                                                                <label for="lastname" class="formbold-form-label"> Last name </label>
+                                                                                <input
+                                                                                  type="text"
+                                                                                  name="lastname"
+                                                                                  id="lastname"
+                                                                                  class="formbold-form-input last-name "
+                                                                                />
+                                                                              </div>
+                                                                            </div>
+                                                                      
+                                                                            <div class="formbold-input-flex">
+                                                                              <div>
+                                                                                <label for="email" class="formbold-form-label"> ID number  </label>
+                                                                                <input
+                                                                                  type="text"
+                                                                                  name="idnumber"
+                                                                                  id="idnumber"
+                                                                                  class="formbold-form-input last-name"
+                                                                                />
+                                                                              </div> 
+                                                                              <div>
+                                                                                <label for="phone" class="formbold-form-label"> Phone number </label>
+                                                                                <input
+                                                                                  type="tel"
+                                                                                  name="phone"
+                                                                                  id="phone"
+                                                                                  class="formbold-form-input phone-number "
+                                                                                />
+                                                                              </div>                               
+                                                                            </div>
+
+                                                                            <div class="formbold-input-flex">
+                                                                              <div>
+                                                                                <label for="email" class="email formbold-form-label"> Email </label>
+                                                                                <input
+                                                                                  type="email"
+                                                                                  name="email"
+                                                                                  id="email"
+                                                                                  class="formbold-form-input"
+                                                                                />
+                                                                              </div>
+                                                                            </div>
+                                                                    
+                                                                            <div class="formbold-checkbox-wrapper">
+                                                                              <label for="supportCheckbox" class="formbold-checkbox-label">
+                                                                                <div class="formbold-relative">
+                                                                                  <input
+                                                                                    type="checkbox"
+                                                                                    id="supportCheckbox"
+                                                                                    class="formbold-input-checkbox"
+                                                                                  />
+                                                                                  <div class="formbold-checkbox-inner">
+                                                                                    <span class="formbold-opacity-0">
+                                                                                      <svg
+                                                                                        width="11"
+                                                                                        height="8"
+                                                                                        viewBox="0 0 11 8"
+                                                                                        fill="none"
+                                                                                        class="formbold-stroke-current"
+                                                                                      >
+                                                                                        <path
+                                                                                          d="M10.0915 0.951972L10.0867 0.946075L10.0813 0.940568C9.90076 0.753564 9.61034 0.753146 9.42927 0.939309L4.16201 6.22962L1.58507 3.63469C1.40401 3.44841 1.11351 3.44879 0.932892 3.63584C0.755703 3.81933 0.755703 4.10875 0.932892 4.29224L0.932878 4.29225L0.934851 4.29424L3.58046 6.95832C3.73676 7.11955 3.94983 7.2 4.1473 7.2C4.36196 7.2 4.55963 7.11773 4.71406 6.9584L10.0468 1.60234C10.2436 1.4199 10.2421 1.1339 10.0915 0.951972ZM4.2327 6.30081L4.2317 6.2998C4.23206 6.30015 4.23237 6.30049 4.23269 6.30082L4.2327 6.30081Z"
+                                                                                          stroke-width="0.4"
+                                                                                        ></path>
+                                                                                      </svg>
+                                                                                    </span>
+                                                                                  </div>
+                                                                                </div>
+                                                                                I agree to the defined
+                                                                                <a id="openModal" data-bs-toggle="collapse" data-bs-target="#collapseTermsAndConditions"  href="#"> terms, conditions, and policies</a>
+                                                                              </label>
+                                                                            </div>
+                                                                      
+                                                                            <button class="formbold-btn cta-btn cta-btn:focus" id="submitButton">    
+                                                                              <span class="button-text">Submit</span>
+                                                                              <span class="spinner formbold-btn-hidden ">
+                                                                                submitting..<i class="fa-solid fa-circle-notch fa-spin"></i>
+                                                                              </span>
+                                                                            </button>
+                                                                          </form>
+--                                                                      </div>
+                                                                      </div>
+
+                                                          </div>
+                                                      </div>
+
+                                                      <div class="col">
+                                                        <div class="accordion" id="accordionExample">
+                                                          <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="headingOne">
+                                                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                Affected Clause(s) 
+                                                              </button>
+                                                            </h2>
+                                                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                              <div class="accordion-body" >
+                                                                <strong>This is the first item's accordion body.</strong> 
+                                                              </div>
+                                                            </div>
+                                                          </div>
+
+                                                          <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="headingTwo">
+                                                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                Legal Ramifications 
+                                                              </button>
+                                                            </h2>
+                                                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                              <div class="accordion-body"id="legal-ramifications-container">
+                                                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                                              </div>
+                                                            </div>
+                                                          </div>
+
+                                                          <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="headingThree">
+                                                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                                Opinions and Views of Domain Experts
+                                                              </button>
+                                                            </h2>
+                                                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                              <div class="accordion-body">
+                                                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                                              </div>
+                                                            </div>
+                                                          </div>
+
+                                                          <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="TermsAndConditions">
+                                                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTermsAndConditions" aria-expanded="false" aria-controls="collapseTermsAndConditions">
+                                                                Consent, Terms and Conditions
+                                                              </button>
+                                                            </h2>
+                                                            <div id="collapseTermsAndConditions" class="accordion-collapse collapse" aria-labelledby="TermsAndConditions" data-bs-parent="#accordionExample">
+                                                              <div class="accordion-body">
+                                                                <div class="modal-terms" id="modal-terms-container">
+                                                                  <button class="close-btn" id="closeModal">&times;</button>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+
+            </div>
+
+            
+          </section>
+          <div class="row">
+            <div class="table">
+              <div class="row header-row">
+                <div class="col">Target Organ</div>
+                <div class="col">For</div>
+                <div class="col">Source</div>
+                <div class="col">Deliver To</div>
+              </div>
+              <div class="row content-row">
+                <div class="col">
+                  <p id="modal-target-organ" class="chip"></p>
+                </div>
+                <div class="col">
+                  <p id="modal-target-for" class="chip"></p>
+                </div>
+                <div class="col">
+                  <p id="modal-source" class="chip"></p>
+                </div>
+                <div class="col">
+                  <p id="modal-deliver-to" class="chip"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+              
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="terms-modal">
+      <section   class="">
+
+        <div id="modalOverlay" class="modal-overlay">
+          <div class="modal-terms" id="modal-terms-container">
+            <button class="close-btn" id="closeModal">&times;</button>
+          </div>
+        </div>
+      </section> 
+    </div> -->
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule section">
+,
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Event Speakers<br></h2>
-
+        <h2>Where your Voice, Input, Suggestions are needed<br></h2>
+        <p>These are the public participation calls to action , where your input, opinion and suggestions are needed</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="row gy-4">
-
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <img src="assets/img/speakers/speaker-1.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4><a href="speaker-details.html">Walter White</a></h4>
-                  <span>Quas alias incidunt</span>
-                </div>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <img src="assets/img/speakers/speaker-2.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4><a href="speaker-details.html">Hubert Hirthe</a></h4>
-                  <span>Consequuntur odio aut</span>
-                </div>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <img src="assets/img/speakers/speaker-3.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4><a href="speaker-details.html">Amanda Jepson</a></h4>
-                  <span>Fugiat laborum et</span>
-                </div>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="member">
-              <img src="assets/img/speakers/speaker-4.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4><a href="speaker-details.html">William Anderson</a></h4>
-                  <span>Debitis iure vero</span>
-                </div>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Speakers Section -->
-
-    <!-- Schedule Section -->
-    <section id="schedule" class="schedule section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Event Schedule<br></h2>
-
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" x-data="{ message: 'Hello, World!', fetchData() { 
-        fetch('http://127.0.0.1:3000/campaigns')
-          .then(response => response.json())
-          .then(data => this.message = data.message); } }">
-
         <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
           <li class="nav-item">
-            <a class="nav-link active" href="#day-1" role="tab" data-bs-toggle="tab">Day 1</a>
+            <a class="nav-link active" href="#all" role="tab" data-bs-toggle="tab">All </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab">Day 2</a>
+            <a class="nav-link" href="#legistlature" role="tab" data-bs-toggle="tab">The Legistlature</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#day-3" role="tab" data-bs-toggle="tab">Day 3</a>
+            <a class="nav-link" href="#executive" role="tab" data-bs-toggle="tab">The Executive </a>
+          </li>         
+          <li class="nav-item">
+            <a class="nav-link" href="#judiciary" role="tab" data-bs-toggle="tab">The Judiciary </a>
           </li>
         </ul>
 
         <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
-          <h3 class="sub-heading">Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet officia. Eius necessitatibus voluptatem quis labore perspiciatis quia.</h3>
+          <h3 class="sub-heading">This are all the areas, calls to action and public interest invitations to give opinions , suggestions and any other relevant input on.</h3>
 
-          <!-- Schdule Day 1 -->
-          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
-            <p x-text="message"></p>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>09:30 AM</time></div>
-              <div class="col-md-10">
-                <h4>Registration</h4>
-                <p>Fugit voluptas iusto maiores temporibus autem numquam magnam.</p>
-              </div>
-            </div>
+          <!-- legistlature campaigns  -->
+          <div role="tabpanel" class="col-lg-9 tab-pane fade campaign-item show active" id="all">
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
+              <div class="col-md-2"><time></time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="assets/img/speakers/speaker-1-2.jpg" alt="Brenden Legros">
+                  <img src="assets/img/no-results.png" alt="No results image">
                 </div>
-                <h4>Keynote <span>Brenden Legros</span></h4>
-                <p>Facere provident incidunt quos voluptas.</p>
+                <h4>Nothing to show  <span> </span></h4>
+                <p></p>
               </div>
             </div>
+    
+          </div><!-- End all campaigns -->
+
+          <!-- all campaigns  -->
+          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="legistlature">
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>11:00 AM</time></div>
+              <div class="col-md-2"><time></time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="assets/img/speakers/speaker-2-2.jpg" alt="Hubert Hirthe">
+                  <img src="assets/img/no-results.png" alt="No results image">
                 </div>
-                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
+                <h4>Nothing to show  <span> </span></h4>
+                <p></p>
               </div>
             </div>
+
+          </div><!-- End legistlature campaigns -->
+
+          <!-- executive campaigns  -->
+          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="executive">
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>12:00 AM</time></div>
+              <div class="col-md-2"><time></time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="assets/img/speakers/speaker-3-2.jpg" alt="Cole Emmerich">
+                  <img src="assets/img/no-results.png" alt="No results image">
                 </div>
-                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
-                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
+                <h4>Nothing to show  <span> </span></h4>
+                <p></p>
               </div>
             </div>
+
+          </div><!-- End executive campaigns -->
+
+          <!-- Judiciary campaigns -->
+          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="judiciary">
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>02:00 PM</time></div>
+              <div class="col-md-2"><time></time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="assets/img/speakers/speaker-4-2.jpg" alt="Jack Christiansen">
+                  <img src="assets/img/no-results.png" alt="No results image">
                 </div>
-                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
-                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+                <h4>Nothing to show  <span> </span></h4>
+                <p></p>
               </div>
             </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>03:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-5.jpg" alt="Alejandrin Littel">
-                </div>
-                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
-                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
-              </div>
+          </div><!-- Judiciary campaigns -->
+
+          <!-- Hidden content for the GLightbox -->
+          <div style="display: none;">
+            <div id="content-1">
+              <h2>Content 1 Title</h2>
+              <p>This is the content for the first item. You can add forms, text, or any other HTML elements.</p>
+              <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <button type="submit">Submit</button>
+              </form>
             </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>04:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-6.jpg" alt="Willow Trantow">
-                </div>
-                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
-                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
-              </div>
+            <div id="content-2">
+              <h2>Content 2 Title</h2>
+              <p>This is the content for the second item. Customize as needed.</p>
             </div>
-
-          </div><!-- End Schdule Day 1 -->
-
-          <!-- Schdule Day 2 -->
-          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-1-2.jpg" alt="Brenden Legros">
-                </div>
-                <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
-                <p>Facere provident incidunt quos voluptas.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>11:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-2-2.jpg" alt="Hubert Hirthe">
-                </div>
-                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-3-2.jpg" alt="Cole Emmerich">
-                </div>
-                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
-                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>02:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-4-2.jpg" alt="Jack Christiansen">
-                </div>
-                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
-                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>03:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-5.jpg" alt="Alejandrin Littel">
-                </div>
-                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
-                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>04:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-6.jpg" alt="Willow Trantow">
-                </div>
-                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
-                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
-              </div>
-            </div>
-
-          </div><!-- End Schdule Day 2 -->
-
-          <!-- Schdule Day 3 -->
-          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-2-2.jpg" alt="Hubert Hirthe">
-                </div>
-                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>11:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-3-2.jpg" alt="Cole Emmerich">
-                </div>
-                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
-                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-1-2.jpg" alt="Brenden Legros">
-                </div>
-                <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
-                <p>Facere provident incidunt quos voluptas.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>02:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-4-2.jpg" alt="Jack Christiansen">
-                </div>
-                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
-                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>03:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-5.jpg" alt="Alejandrin Littel">
-                </div>
-                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
-                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>04:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-6.jpg" alt="Willow Trantow">
-                </div>
-                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
-                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
-              </div>
-            </div>
-
-          </div><!-- End Schdule Day 3 -->
+          </div>
 
         </div>
-
-      </>
+     
     </section><!-- /Schedule Section -->
 
-    <!-- Venue Section -->
-    <section id="venue" class="venue section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Event Venue<br></h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container-fluid" data-aos="fade-up">
-
-        <div class="row g-0">
-          <div class="col-lg-6 venue-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-          </div>
-
-          <div class="col-lg-6 venue-info">
-            <div class="row justify-content-center">
-              <div class="col-11 col-lg-8 position-relative">
-                <h3>Downtown Conference Center, New York</h3>
-                <p>Iste nobis eum sapiente sunt enim dolores labore accusantium autem. Cumque beatae ipsam. Est quae sit qui voluptatem corporis velit. Qui maxime accusamus possimus. Consequatur sequi et ea suscipit enim nesciunt quia velit.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="container-fluid venue-gallery-container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row g-0">
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/venue-gallery-1.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/venue-gallery-1.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/venue-gallery-2.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/venue-gallery-2.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/venue-gallery-3.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/venue-gallery-3.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/venue-gallery-4.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/venue-gallery-4.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/venue-gallery-5.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/venue-gallery-5.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/venue-gallery-6.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/venue-gallery-6.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/venue-gallery-7.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/venue-gallery-7.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/venue-gallery-8.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/venue-gallery-8.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </section><!-- /Venue Section -->
-
-    <!-- Hotels Section -->
-    <section id="hotels" class="hotels section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Hotels</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card h-100">
-              <div class="card-img">
-                <img src="assets/img/hotels-1.jpg" alt="" class="img-fluid">
-              </div>
-              <h3><a href="#" class="stretched-link">Non quibusdam blanditiis</a></h3>
-              <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-              <p>0.4 Mile from the Venue</p>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="card h-100">
-              <div class="card-img">
-                <img src="assets/img/hotels-2.jpg" alt="" class="img-fluid">
-              </div>
-              <h3><a href="#" class="stretched-link">Aspernatur assumenda</a></h3>
-              <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-              <p>0.5 Mile from the Venue</p>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="card h-100">
-              <div class="card-img">
-                <img src="assets/img/hotels-3.jpg" alt="" class="img-fluid">
-              </div>
-              <h3><a href="#" class="stretched-link">Dolores ut ut voluptatibu</a></h3>
-              <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-              <p>0.6 Mile from the Venue</p>
-            </div>
-          </div><!-- End Card Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Hotels Section -->
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Gallery</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "centeredSlides": true,
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 0
-                },
-                "768": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 20
-                },
-                "1200": {
-                  "slidesPerView": 5,
-                  "spaceBetween": 20
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-1.jpg"><img src="assets/img/event-gallery/event-gallery-1.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-2.jpg"><img src="assets/img/event-gallery/event-gallery-2.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-3.jpg"><img src="assets/img/event-gallery/event-gallery-3.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-4.jpg"><img src="assets/img/event-gallery/event-gallery-4.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-5.jpg"><img src="assets/img/event-gallery/event-gallery-5.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-6.jpg"><img src="assets/img/event-gallery/event-gallery-6.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-7.jpg"><img src="assets/img/event-gallery/event-gallery-7.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-8.jpg"><img src="assets/img/event-gallery/event-gallery-8.jpg" class="img-fluid" alt=""></a></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Gallery Section -->
-
     <!-- Sponsors Section -->
-    <section id="sponsors" class="sponsors section light-background">
+    <!-- <section id="sponsors" class="sponsors section light-background"> -->
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Sponsors</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+      <!-- <div class="container section-title" data-aos="fade-up"> -->
+        <!-- <h2>Sponsors</h2> -->
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      <!-- </div>End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <!-- <div class="container" data-aos="fade-up" data-aos-delay="100"> -->
 
-        <div class="row g-0 clients-wrap">
+        <!-- <div class="row g-0 clients-wrap">
 
           <div class="col-xl-3 col-md-4 client-logo">
             <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          <!-- <div class="col-xl-3 col-md-4 client-logo"> -->
+            <!-- <img src="assets/img/clients/client-2.png" class="img-fluid" alt=""> -->
+          <!-- </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          <!-- <div class="col-xl-3 col-md-4 client-logo"> -->
+            <!-- <img src="assets/img/clients/client-3.png" class="img-fluid" alt=""> -->
+          <!-- </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          <!-- <div class="col-xl-3 col-md-4 client-logo"> -->
+            <!-- <img src="assets/img/clients/client-4.png" class="img-fluid" alt=""> -->
+          <!-- </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          <!-- <div class="col-xl-3 col-md-4 client-logo"> -->
+            <!-- <img src="assets/img/clients/client-5.png" class="img-fluid" alt=""> -->
+          <!-- </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          <!-- <div class="col-xl-3 col-md-4 client-logo"> -->
+            <!-- <img src="assets/img/clients/client-6.png" class="img-fluid" alt=""> -->
+          <!-- </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          <!-- <div class="col-xl-3 col-md-4 client-logo"> -->
+            <!-- <img src="assets/img/clients/client-7.png" class="img-fluid" alt=""> -->
+          <!-- </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          <!-- <div class="col-xl-3 col-md-4 client-logo"> -->
+            <!-- <img src="assets/img/clients/client-8.png" class="img-fluid" alt=""> -->
+          <!-- </div>End Client Item -->
 
-        </div>
+        <!-- </div> -->
 
-      </div>
+      <!-- </div>  -->
 
-    </section><!-- /Sponsors Section -->
-
-    <!-- Faq Section -->
-    <section id="faq" class="faq section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Frequently Asked Questions</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row justify-content-center">
-
-          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="faq-container">
-
-              <div class="faq-item faq-active">
-                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
-                <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Feugiat scelerisque varius morbi enim nunc faucibus?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
-                <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor?</h3>
-                <div class="faq-content">
-                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Perspiciatis quod quo quos nulla quo illum ullam?</h3>
-                <div class="faq-content">
-                  <p>Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed in suscipit sequi. Distinctio ipsam dolore et.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-            </div>
-
-          </div><!-- End Faq Column-->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Faq Section -->
-
-    <!-- Buy Tickets Section -->
-    <section id="buy-tickets" class="buy-tickets section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Buy Tickets<br></h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4 pricing-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h3>Standard Access</h3>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h4><sup>$</sup>150<span> / month</span></h4>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <ul>
-              <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-              <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-              <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-          </div>
-        </div><!-- End Pricing Item -->
-
-        <div class="row gy-4 pricing-item featured mt-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h3>Premium Access<br></h3>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h4><sup>$</sup>250<span> / month</span></h4>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <ul>
-              <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-              <li><i class="bi bi-check"></i> <strong>Nec feugiat nisl pretium</strong></li>
-              <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-          </div>
-        </div><!-- End Pricing Item -->
-
-        <div class="row gy-4 pricing-item mt-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h3>Pro Access<br></h3>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h4><sup>$</sup>350<span> / month</span></h4>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <ul>
-              <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-              <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-              <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-          </div>
-        </div><!-- End Pricing Item -->
-
-      </div>
-
-    </section><!-- /Buy Tickets Section -->
+    <!-- </section>/Sponsors Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -886,7 +513,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>You can reach out and contact us we would be glad to hear from you</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -971,14 +598,18 @@
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
             <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">TheEvent</span>
+              <span class="sitename">The Public Participation Forum</span>
             </a>
             <div class="footer-contact pt-3">
-              <p>A108 Adam Street</p>
-              <p>New York, NY 535022</p>
+              <!-- <p>A108 Adam Street</p>.
+              <p>New York, NY 535022</p> -->
               <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
               <p><strong>Email:</strong> <span>info@example.com</span></p>
             </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <ul></ul>
           </div>
 
           <div class="col-lg-2 col-md-3 footer-links">
@@ -992,39 +623,6 @@
             </ul>
           </div>
 
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Product Management</a></li>
-              <li><a href="#">Marketing</a></li>
-              <li><a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Hic solutasetp</h4>
-            <ul>
-              <li><a href="#">Molestiae accusamus iure</a></li>
-              <li><a href="#">Excepturi dignissimos</a></li>
-              <li><a href="#">Suscipit distinctio</a></li>
-              <li><a href="#">Dilecta</a></li>
-              <li><a href="#">Sit quas consectetur</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Nobis illum</h4>
-            <ul>
-              <li><a href="#">Ipsam</a></li>
-              <li><a href="#">Laudantium dolorum</a></li>
-              <li><a href="#">Dinera</a></li>
-              <li><a href="#">Trodelas</a></li>
-              <li><a href="#">Flexo</a></li>
-            </ul>
-          </div>
-
         </div>
       </div>
     </div>
@@ -1034,19 +632,19 @@
 
         <div class="d-flex flex-column align-items-center align-items-lg-start">
           <div>
-            © Copyright <strong><span>MyWebsite</span></strong>. All Rights Reserved
+            © Copyright <strong><span>www.publicparticipation.com</span></strong>. All Rights Reserved
           </div>
           <div class="credits">
             <!-- All the links in the footer should remain intact. -->
             <!-- You can delete the links only if you purchased the pro version. -->
             <!-- Licensing information: https://bootstrapmade.com/license/ -->
             <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
           </div>
         </div>
 
         <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href="https://x.com/ppfkenya"><i class="bi bi-twitter-x"></i></a>
           <a href=""><i class="bi bi-facebook"></i></a>
           <a href=""><i class="bi bi-instagram"></i></a>
           <a href=""><i class="bi bi-linkedin"></i></a>
@@ -1069,166 +667,20 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/actioncable@5.2.8-1/lib/assets/compiled/action_cable.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/base.js"></script>
 
   <script>
-  let response_identifer = null
-
-  function getCurrentPosition() {
-
-      navigator.geolocation.getCurrentPosition(
-        position => {
-          console.log("Latitude:", position.coords.latitude);
-          console.log("Longitude:", position.coords.longitude);
-          // Send this to your API
-          return {
-            latitude: position.coords.latitudet,
-            longitude: position.coords.latitude, 
-            };
-        },
-        error => {
-          console.error("Geolocation error:", error);
-          return {
-            latitude: null,
-            longitude: null, 
-            };
-        }
-      );
+    if (!window.location.pathname.endsWith('.html')) {
+        window.history.replaceState({}, '', window.location.pathname + '.html');
     }
+  </script>
+  <script>
 
-    getCurrentPosition() 
 
-    function generateRandomToken(length = 32) {
-      // Create a random array of values
-      const array = new Uint8Array(length);
-      window.crypto.getRandomValues(array);
-      
-      // Convert the array to a hexadecimal string (a hash-like format)
-      return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-    }
-
-    let token = generateRandomToken(32); // Generate a 32-byte token
-    console.log(token); // Log the random token
-
-    document.addEventListener("DOMContentLoaded", function() {
-      fetchData();
-    });
-  
-    function setCookie(name,value,days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days*24*60*60*1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-    }
-
-    function getBrowserData() {
-      return {
-        userAgent: navigator.userAgent,
-        language: navigator.language,
-        platform: navigator.platform,
-        cookieEnabled: navigator.cookieEnabled,
-        screenWidth: window.screen.width,
-        screenHeight: window.screen.height,
-        colorDepth: window.screen.colorDepth,
-        timezoneOffset: new Date().getTimezoneOffset(),
-      };
-    }
-
-    console.log(getBrowserData());
-
-    async function fetchData() {
-      // Define the email and password
-      const userAgent = "kinyodaniel@gmail.com";  // Replace with actual email
-      const password = "password";    // Replace with actual password
-  
-      // Prepare the data to be sent in the POST request
-      const requestData = {
-        userAgent: getBrowserData(),
-        geolocation: "",
-        token: token
-      };
-
-      // const jsonString = null
-      // if(!response_identifer){
-      const jsonString = JSON.stringify(requestData);
-
-      // }else{
-      //   console.log("response_identifer")
-      //   console.log(response_identifer)
-      // }
-      console.log("response_identifer")
-      console.log(response_identifer)
-
-      try {
-        const response = await fetch("http://127.0.0.1:3000/api/v1/campaigns", {
-          method: "GET",  // Change to POST request
-          headers: {
-            "Content-Type": "application/json", // Ensure the server understands the JSON payload
-            "Authorization": jsonString, // Set the Authorization header
-          },
-          // body: JSON.stringify(requestData),  // Send email and password as JSON in the request body
-        });
-  
-        // If the response is successful, process the data
-        if (response.ok) {
-          const data = await response.json();
-          console.log(data);  // Handle the response
-          // You can update the DOM or use the data as needed
-        } else {
-          console.error("Failed to fetch data:", response.statusText);
-        }
-      } catch (error) {
-        console.error("Error occurred:", error);
-      }
-    }
-
-    websocket_1 = "ws://https://public-participation-forum-frontend-m1keoixcm.vercel.app/api/v1/cable"
-    websocket_2 = "http://localhost:3000/api/v1/cable"
-    socket_1 = 'ws://https://public-participation-forum-frontend-m1keoixcm.vercel.app'
-    socket_2 = "http://localhost:3000"
-
-    const socket = new WebSocket(socket_2);
-
-    socket.onmessage = function(event) {
-      const data = JSON.parse(event.data);
-      console.log(data);
-      // document.getElementById('content').textContent = data.message;  // Assuming response has a 'message' field
-    };
-
-    socket.onerror = function(error) {
-      console.log(data);
-      // document.getElementById('content').textContent = 'WebSocket error.';
-    };
-
-    document.addEventListener("DOMContentLoaded", function() {
-      const cable = ActionCable.createConsumer(websocket_2);
-
-      // Subscribe to the DataChannel
-      const dataChannel = cable.subscriptions.create("DataChannel", {
-        connected() {
-          console.log("Connected to DataChannel");
-        },
-        disconnected() {
-          console.log("Disconnected from DataChannel");
-        },
-        received(data) {
-          console.log("Data received:", data.message);
-          response_identifer = data
-          localStorage.setItem(token, response_identifer);
-          // Update the DOM with the received data
-          // Example: document.getElementById("content").textContent = data.message;
-        }
-      });
-      console.log(dataChannel);
-   
-  });
-
-</script>
-  
-
+  </script>
 </body>
 </html>
