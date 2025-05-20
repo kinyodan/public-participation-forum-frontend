@@ -236,11 +236,21 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
-  margin-right: 8px;
+    max-height: 95px;
+    margin-right: 8px;
+    border-radius: 100px;
+    object-fit: cover; /* Ensures the image covers the container */
+    object-position: center; /* Center the image within the container */
 }
 
 .header .logo h1 {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.header .logo h4 {
   font-size: 30px;
   margin: 0;
   font-weight: 700;
@@ -1705,33 +1715,32 @@ section,
 .campaign-content-modal{
 
   .row {
-    display: flex; /* Ensure columns are in a row */
-    gap: 8px; /* Add space between columns */
-    margin: 0 -4px; /* Optional: Adjust outer margins for consistent spacing */
+    display: flex; 
+    gap: 8px; 
+    margin: 0 -4px;
   }
-  /* Basic modal styling */
   .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Sit on top of everything */
-    z-index: 1000; /* Make sure it appears above other content */
+    display: none;
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.7); /* Opaque dark background */
-    background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */  
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    background-color: rgba(0, 0, 0, 0.7);  
   }
 
   .modal-content {
     background-color: white;
     border: 1px solid #888;
-    margin: 10% auto; /* Center the modal vertically and horizontally */
+    margin: 5% auto; 
     padding: 20px;
     padding-top: 40px;
-    border-radius: 10px; /* Optional: add rounded corners */
-    width: 90%; /* Adjust width as needed */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: add a subtle shadow */
+    border-radius: 10px; 
+    width: 90%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
   }
 
   .close-btn {
@@ -1755,7 +1764,6 @@ section,
     cursor: pointer;
   }
 
-  /* Optional: Add some styles to the modal text */
   .modal h3, .modal p {
     margin: 10px 0;
   }
@@ -1803,7 +1811,6 @@ section,
 
   .formbold-form-wrapper {
     margin: 0 auto;
-    max-width: 570px;
     width: 100%;
     background: white;
   }
@@ -1867,11 +1874,11 @@ section,
     user-select: none;
     font-size: 16px;
     line-height: 24px;
-    color: #536387;
+    /* color: #536387; */
   }
   .formbold-checkbox-label a {
     margin-left: 5px;
-    color: #6a64f1;
+    /* color: #6a64f1; */
   }
   .formbold-input-checkbox {
     position: absolute;
@@ -1902,7 +1909,7 @@ section,
     padding: 14px 25px;
     border: none;
     font-weight: 500;
-    background-color: #6a64f1;
+    background-color: var(--accent-color);
     color: white;
     cursor: pointer;
     margin-top: 25px;
@@ -1912,5 +1919,137 @@ section,
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
   }
  
+  .formbold-btn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  .formbold-btn-hidden {
+    display: none;
+  }
 
+  .spinner .rotating-icon {
+      border: 3px solid transparent;
+      border-top: 3px solid white;
+      border-radius: 50%;
+      width: 19px;
+      height: 19px;
+      animation: spin 1s linear infinite;
+      margin-left: 10px;
+    }
+  }
+  
+
+
+  /* @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } */
+}
+
+#terms-modal{
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+
+  }
+  
+  .modal-overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    justify-content: center;
+    align-items: center; 
+    z-index: 10010;
+  }
+
+  /* Close button */
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .modal-terms {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-height: 80%;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 1.5rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0; 
+    box-sizing: border-box;
+  }
+  
+  .modal .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .modal input {
+    padding: 0.7rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9em;
+  }
+  
+  .modal p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0.4rem 0 0.2rem;
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+  }
+  
+  .btn-open {
+    position: absolute;
+    bottom: 150px;
+  }
+  
+  .btn-close {
+    transform: translate(10px, -20px);
+    padding: 0.5rem 0.7rem;
+    background: #eee;
+    border-radius: 50%;
+  }
 }

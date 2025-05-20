@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - TheEvent Bootstrap Template</title>
+  <title>Index - The Public Participation Forum</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <script src="assets/js/alpinejs@3.12.0" defer></script>  
+  <script src="https://kit.fontawesome.com/0ed3c34988.js" crossorigin="anonymous"></script>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -17,6 +18,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +45,8 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/logo.png" alt="">
+        <img src="assets/img/Designer-9.jpg" alt="">
+        <h4>The Public Participation Forum</h4>
         <!-- Uncomment the line below if you also wish to use an text logo -->
         <!-- <h1 class="sitename">TheEvent</h1>  -->
       </a>
@@ -70,8 +73,9 @@
 
       <div class="container d-flex flex-column align-items-center text-center call-to-action mt-auto">
 
-        <h2 data-aos="fade-up" data-aos-delay="100" class="">THE ANNUAL<br><span>MARKETING</span> CONFERENCE</h2>
-        <p data-aos="fade-up" data-aos-delay="200">10-12 December, Downtown Conference Center, New York</p>
+        <h2 data-aos="fade-up" data-aos-delay="100" class="">ENHANCING PUBLIC PARTICIPATION IN GOVERNANCE, 
+          <br><span>AS OUTLINED BY THE CONSTITUTION OF KENYA 2010.</span> </h2>
+        <p data-aos="fade-up" data-aos-delay="200">Kenya is our country and our responsibility.  </p>
 
         <a class="cta-btn d-none take-me-there d-sm-block" href="#schedule">Take me there</a>
 
@@ -117,35 +121,7 @@
             &times;
           </span>
           <h3 id="modal-title" ></h3>
-          <div class="row">
-            <div class="table">
-              <div class="row header-row">
-                <div class="col">Target Organ</div>
-                <div class="col">Target For</div>
-                <div class="col">Target To</div>
-                <div class="col">Source</div>
-                <div class="col">Deliver To</div>
-              </div>
-              <div class="row content-row">
-                <div class="col">
-                  <p id="modal-target-organ" class="chip"></p>
-                </div>
-                <div class="col">
-                  <p id="modal-target-for" class="chip"></p>
-                </div>
-                <div class="col">
-                  <p id="modal-target-to" class="chip"></p>
-                </div>
-                <div class="col">
-                  <p id="modal-source" class="chip"></p>
-                </div>
-                <div class="col">
-                  <p id="modal-deliver-to" class="chip"></p>
-                </div>
-              </div>
-            </div>
-            
-          </div>
+
           <!-- You can also include forms or other content here -->
 
           <section id="faq" class="faq section">
@@ -153,17 +129,15 @@
 
               <div class="row">
 
-
                                                       <div class="col">
-                                                        <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+                                                        <div data-aos="fade-up" data-aos-delay="100">
 
                                                                       <div class="formbold-main-wrapper">
                                                                         <!-- Author: FormBold Team -->
                                                                         <!-- Learn More: https://formbold.com -->
                                                                         <div class="formbold-form-wrapper">
-                                                                          
                                                                       
-                                                                          <form action="https://formbold.com/s/FORM_ID" method="POST">
+                                                                          <form id="responseForm" method="POST">
                                                                       
                                                                             <div class="formbold-input-flex">
                                                                               <div>
@@ -174,7 +148,7 @@
                                                                                   type="text"
                                                                                   name="firstname"
                                                                                   id="firstname"
-                                                                                  class="formbold-form-input"
+                                                                                  class="formbold-form-input first-name"
                                                                                 />
                                                                               </div>
                                                                               <div>
@@ -183,40 +157,39 @@
                                                                                   type="text"
                                                                                   name="lastname"
                                                                                   id="lastname"
-                                                                                  class="formbold-form-input"
+                                                                                  class="formbold-form-input last-name "
                                                                                 />
                                                                               </div>
                                                                             </div>
                                                                       
-
                                                                             <div class="formbold-input-flex">
                                                                               <div>
                                                                                 <label for="email" class="formbold-form-label"> ID number  </label>
                                                                                 <input
-                                                                                  type="email"
-                                                                                  name="email"
-                                                                                  id="email"
-                                                                                  class="formbold-form-input"
+                                                                                  type="text"
+                                                                                  name="idnumber"
+                                                                                  id="idnumber"
+                                                                                  class="formbold-form-input last-name"
                                                                                 />
-                                                                              </div>                                
+                                                                              </div> 
+                                                                              <div>
+                                                                                <label for="phone" class="formbold-form-label"> Phone number </label>
+                                                                                <input
+                                                                                  type="tel"
+                                                                                  name="phone"
+                                                                                  id="phone"
+                                                                                  class="formbold-form-input phone-number "
+                                                                                />
+                                                                              </div>                               
                                                                             </div>
 
                                                                             <div class="formbold-input-flex">
                                                                               <div>
-                                                                                <label for="email" class="formbold-form-label"> Email </label>
+                                                                                <label for="email" class="email formbold-form-label"> Email </label>
                                                                                 <input
                                                                                   type="email"
                                                                                   name="email"
                                                                                   id="email"
-                                                                                  class="formbold-form-input"
-                                                                                />
-                                                                              </div>
-                                                                              <div>
-                                                                                <label for="phone" class="formbold-form-label"> Phone number </label>
-                                                                                <input
-                                                                                  type="text"
-                                                                                  name="phone"
-                                                                                  id="phone"
                                                                                   class="formbold-form-input"
                                                                                 />
                                                                               </div>
@@ -248,30 +221,22 @@
                                                                                   </div>
                                                                                 </div>
                                                                                 I agree to the defined
-                                                                                <a href="#"> terms, conditions, and policies</a>
+                                                                                <a id="openModal" data-bs-toggle="collapse" data-bs-target="#collapseTermsAndConditions"  href="#"> terms, conditions, and policies</a>
                                                                               </label>
                                                                             </div>
                                                                       
-                                                                            <button class="formbold-btn">Register Now</button>
+                                                                            <button class="formbold-btn cta-btn cta-btn:focus" id="submitButton">    
+                                                                              <span class="button-text">Submit</span>
+                                                                              <span class="spinner formbold-btn-hidden ">
+                                                                                submitting..<i class="fa-solid fa-circle-notch fa-spin"></i>
+                                                                              </span>
+                                                                            </button>
                                                                           </form>
-                                                                        </div>
+--                                                                      </div>
                                                                       </div>
 
-
-
-
-
-
-
-
-
-                                                          <!-- <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example"> -->
-                                                          <!-- <input class="form-control" type="text" placeholder="Default input" aria-label="default input example"> -->
-                                                          <!-- <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example"> -->
                                                           </div>
                                                       </div>
-
-
 
                                                       <div class="col">
                                                         <div class="accordion" id="accordionExample">
@@ -284,7 +249,6 @@
                                                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                               <div class="accordion-body" >
                                                                 <strong>This is the first item's accordion body.</strong> 
-
                                                               </div>
                                                             </div>
                                                           </div>
@@ -305,7 +269,7 @@
                                                           <div class="accordion-item">
                                                             <h2 class="accordion-header" id="headingThree">
                                                               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                                Accordion Item #3
+                                                                Opinions and Views of Domain Experts
                                                               </button>
                                                             </h2>
                                                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -314,18 +278,67 @@
                                                               </div>
                                                             </div>
                                                           </div>
+
+                                                          <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="TermsAndConditions">
+                                                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTermsAndConditions" aria-expanded="false" aria-controls="collapseTermsAndConditions">
+                                                                Consent, Terms and Conditions
+                                                              </button>
+                                                            </h2>
+                                                            <div id="collapseTermsAndConditions" class="accordion-collapse collapse" aria-labelledby="TermsAndConditions" data-bs-parent="#accordionExample">
+                                                              <div class="accordion-body">
+                                                                <div class="modal-terms" id="modal-terms-container">
+                                                                  <button class="close-btn" id="closeModal">&times;</button>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
                                                         </div>
                                                       </div>
 
-
-
             </div>
 
+            
           </section>
-                   
+          <div class="row">
+            <div class="table">
+              <div class="row header-row">
+                <div class="col">Target Organ</div>
+                <div class="col">For</div>
+                <div class="col">Source</div>
+                <div class="col">Deliver To</div>
+              </div>
+              <div class="row content-row">
+                <div class="col">
+                  <p id="modal-target-organ" class="chip"></p>
+                </div>
+                <div class="col">
+                  <p id="modal-target-for" class="chip"></p>
+                </div>
+                <div class="col">
+                  <p id="modal-source" class="chip"></p>
+                </div>
+                <div class="col">
+                  <p id="modal-deliver-to" class="chip"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+              
         </div>
       </div>
     </div>
+
+    <!-- <div id="terms-modal">
+      <section   class="">
+
+        <div id="modalOverlay" class="modal-overlay">
+          <div class="modal-terms" id="modal-terms-container">
+            <button class="close-btn" id="closeModal">&times;</button>
+          </div>
+        </div>
+      </section> 
+    </div> -->
 
     <!-- Schedule Section -->
     <section id="schedule" class="schedule section">
@@ -357,67 +370,69 @@
 
           <h3 class="sub-heading">This are all the areas, calls to action and public interest invitations to give opinions , suggestions and any other relevant input on.</h3>
 
-          <!-- Schdule Day 1 -->
+          <!-- legistlature campaigns  -->
           <div role="tabpanel" class="col-lg-9 tab-pane fade campaign-item show active" id="all">
-            <p x-text="message"></p>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>09:30 AM</time></div>
+              <div class="col-md-2"><time></time></div>
               <div class="col-md-10">
-                <h4>Registration</h4>
-                <p>Fugit voluptas iusto maiores temporibus autem numquam magnam.</p>
+                <div class="speaker">
+                  <img src="assets/img/no-results.png" alt="No results image">
+                </div>
+                <h4>Nothing to show  <span> </span></h4>
+                <p></p>
               </div>
             </div>
+    
+          </div><!-- End all campaigns -->
 
-          </div><!-- End Schdule Day 1 -->
-
-          <!-- Schdule Day 2 -->
+          <!-- all campaigns  -->
           <div role="tabpanel" class="col-lg-9  tab-pane fade" id="legistlature">
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>02:00 PM</time></div>
+              <div class="col-md-2"><time></time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="assets/img/speakers/speaker-4-2.jpg" alt="Jack Christiansen">
+                  <img src="assets/img/no-results.png" alt="No results image">
                 </div>
-                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
-                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+                <h4>Nothing to show  <span> </span></h4>
+                <p></p>
               </div>
             </div>
 
-          </div><!-- End Schdule Day 2 -->
+          </div><!-- End legistlature campaigns -->
 
-          <!-- Schdule Day 3 -->
+          <!-- executive campaigns  -->
           <div role="tabpanel" class="col-lg-9  tab-pane fade" id="executive">
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
+              <div class="col-md-2"><time></time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="assets/img/speakers/speaker-2-2.jpg" alt="Hubert Hirthe">
+                  <img src="assets/img/no-results.png" alt="No results image">
                 </div>
-                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
+                <h4>Nothing to show  <span> </span></h4>
+                <p></p>
               </div>
             </div>
 
-          </div><!-- End Schdule Day 3 -->
+          </div><!-- End executive campaigns -->
 
-          <!-- Schdule Day 3 -->
+          <!-- Judiciary campaigns -->
           <div role="tabpanel" class="col-lg-9  tab-pane fade" id="judiciary">
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
+              <div class="col-md-2"><time></time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="assets/img/speakers/speaker-2-2.jpg" alt="Hubert Hirthe">
+                  <img src="assets/img/no-results.png" alt="No results image">
                 </div>
-                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
+                <h4>Nothing to show  <span> </span></h4>
+                <p></p>
               </div>
             </div>
 
-          </div><!-- End Schdule Day 3 -->
+          </div><!-- Judiciary campaigns -->
 
           <!-- Hidden content for the GLightbox -->
           <div style="display: none;">
@@ -442,55 +457,55 @@
     </section><!-- /Schedule Section -->
 
     <!-- Sponsors Section -->
-    <section id="sponsors" class="sponsors section light-background">
+    <!-- <section id="sponsors" class="sponsors section light-background"> -->
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Sponsors</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+      <!-- <div class="container section-title" data-aos="fade-up"> -->
+        <!-- <h2>Sponsors</h2> -->
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      <!-- </div>End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <!-- <div class="container" data-aos="fade-up" data-aos-delay="100"> -->
 
-        <div class="row g-0 clients-wrap">
+        <!-- <div class="row g-0 clients-wrap">
 
           <div class="col-xl-3 col-md-4 client-logo">
             <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          <!-- <div class="col-xl-3 col-md-4 client-logo"> -->
+            <!-- <img src="assets/img/clients/client-2.png" class="img-fluid" alt=""> -->
+          <!-- </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          <!-- <div class="col-xl-3 col-md-4 client-logo"> -->
+            <!-- <img src="assets/img/clients/client-3.png" class="img-fluid" alt=""> -->
+          <!-- </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          <!-- <div class="col-xl-3 col-md-4 client-logo"> -->
+            <!-- <img src="assets/img/clients/client-4.png" class="img-fluid" alt=""> -->
+          <!-- </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          <!-- <div class="col-xl-3 col-md-4 client-logo"> -->
+            <!-- <img src="assets/img/clients/client-5.png" class="img-fluid" alt=""> -->
+          <!-- </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          <!-- <div class="col-xl-3 col-md-4 client-logo"> -->
+            <!-- <img src="assets/img/clients/client-6.png" class="img-fluid" alt=""> -->
+          <!-- </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          <!-- <div class="col-xl-3 col-md-4 client-logo"> -->
+            <!-- <img src="assets/img/clients/client-7.png" class="img-fluid" alt=""> -->
+          <!-- </div>End Client Item -->
 
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          <!-- <div class="col-xl-3 col-md-4 client-logo"> -->
+            <!-- <img src="assets/img/clients/client-8.png" class="img-fluid" alt=""> -->
+          <!-- </div>End Client Item -->
 
-        </div>
+        <!-- </div> -->
 
-      </div>
+      <!-- </div>  -->
 
-    </section><!-- /Sponsors Section -->
+    <!-- </section>/Sponsors Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -498,7 +513,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>You can reach out and contact us we would be glad to hear from you</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -583,14 +598,18 @@
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
             <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">TheEvent</span>
+              <span class="sitename">The Public Participation Forum</span>
             </a>
             <div class="footer-contact pt-3">
-              <p>A108 Adam Street</p>
-              <p>New York, NY 535022</p>
+              <!-- <p>A108 Adam Street</p>.
+              <p>New York, NY 535022</p> -->
               <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
               <p><strong>Email:</strong> <span>info@example.com</span></p>
             </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <ul></ul>
           </div>
 
           <div class="col-lg-2 col-md-3 footer-links">
@@ -604,39 +623,6 @@
             </ul>
           </div>
 
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Product Management</a></li>
-              <li><a href="#">Marketing</a></li>
-              <li><a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Hic solutasetp</h4>
-            <ul>
-              <li><a href="#">Molestiae accusamus iure</a></li>
-              <li><a href="#">Excepturi dignissimos</a></li>
-              <li><a href="#">Suscipit distinctio</a></li>
-              <li><a href="#">Dilecta</a></li>
-              <li><a href="#">Sit quas consectetur</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Nobis illum</h4>
-            <ul>
-              <li><a href="#">Ipsam</a></li>
-              <li><a href="#">Laudantium dolorum</a></li>
-              <li><a href="#">Dinera</a></li>
-              <li><a href="#">Trodelas</a></li>
-              <li><a href="#">Flexo</a></li>
-            </ul>
-          </div>
-
         </div>
       </div>
     </div>
@@ -646,19 +632,19 @@
 
         <div class="d-flex flex-column align-items-center align-items-lg-start">
           <div>
-            © Copyright <strong><span>MyWebsite</span></strong>. All Rights Reserved
+            © Copyright <strong><span>www.publicparticipation.com</span></strong>. All Rights Reserved
           </div>
           <div class="credits">
             <!-- All the links in the footer should remain intact. -->
             <!-- You can delete the links only if you purchased the pro version. -->
             <!-- Licensing information: https://bootstrapmade.com/license/ -->
             <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
           </div>
         </div>
 
         <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href="https://x.com/ppfkenya"><i class="bi bi-twitter-x"></i></a>
           <a href=""><i class="bi bi-facebook"></i></a>
           <a href=""><i class="bi bi-instagram"></i></a>
           <a href=""><i class="bi bi-linkedin"></i></a>
@@ -685,247 +671,16 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/base.js"></script>
 
   <script>
-    let response_identifer = null
-    let campaign_data = null
-
-    // // Event listener for dynamically generated items
-    // document.addEventListener("click", function(event) {
-    //     // Check if the clicked element is a link with a specific class
-    //     console.log("addEventListener()");
-    //     console.log("addEventListener()");
-
-    //     if (event.target && event.target.classList.contains('schedule-item')) {
-    //       const itemId = event.target.getAttribute('data-id'); // Assuming you have a data-id attribute
-    //       if (itemId) {
-  
-    //       }
-    //     }
-    // });
-
-
-  // Function to render schedule items
-  function renderCampaigns(campaigns,target_organ) {
-    const container = document.getElementById(target_organ);
-    container.innerHTML = ""; // Clear existing content
-    console.log("renderSchedule()");
-    console.log(campaign_data);
-    console.log("renderSchedule()");
-
-    campaigns.forEach(campaign => {
-        const campaignItem = document.createElement("div");
-        campaignItem.classList.add("row", "schedule-item");
-        campaignItem.setAttribute("data-id", campaign.id+campaign.target_organ);
-
-        campaignItem.innerHTML = `
-          <div class="col-md-2"><time>${new Date(campaign.campaign.start_date).toLocaleDateString()}</time></div>
-          <div class="col-md-10">
-            <h4>${campaign.campaign.campaign_title}</h4>
-            <p><strong>Target For:</strong> ${campaign.campaign.target_for}</p>
-            <p><strong>Target To:</strong> ${campaign.campaign.target_to}</p>
-            <p><strong>Source:</strong> ${campaign.campaign.campign_source}</p>
-            <p><strong>Deliver To:</strong> <a href="mailto:${campaign.campaign.deliver_to}">${campaign.campaign.deliver_to}</a></p>
-            <p><strong>Target organ:</strong> ${campaign.campaign.target_organ}</p>
-          </div>
-        `;
-        container.appendChild(campaignItem);
-
-        // Event listener for opening the modal on click
-        campaignItem.addEventListener("click", () => {
-          // Populate modal with campaign data
-          document.getElementById("modal-title").textContent = campaign.campaign.campaign_title;
-          document.getElementById("modal-target-for").textContent = `${campaign.campaign.target_for}`;
-          document.getElementById("modal-target-to").textContent = `${campaign.campaign.target_to}`;
-          document.getElementById("modal-source").textContent = `${campaign.campaign.campign_source}`;
-          document.getElementById("modal-deliver-to").textContent = ` ${campaign.campaign.deliver_to}`;
-          document.getElementById("modal-target-organ").textContent = `${campaign.campaign.target_organ}`;
-
-          // Inject FAQ content into the modal dynamically
-          const legalRamificationsSection = document.getElementById("legal-ramifications-container");
-          legalRamificationsSection.innerHTML = ''; 
-          campaign.legal_ramifications.forEach(faqItem => {
-            const legalRamificationsContent = `
-              <div class="legal-ramifications-item">
-                <h3>${faqItem.name}</h3>
-                <div class="legal-ramifications-content">
-                  <p>${faqItem.description}</p>
-                </div>
-              </div>
-            `;
-            legalRamificationsSection.innerHTML += legalRamificationsContent;
-          });
-
-
-
-
-
-
-
-          // Show the modal
-          document.getElementById("modal").style.display = "block";
-        });
-    });
-  }
-  // Call the function to render the schedule
-  // Event listener for closing the modal
-  document.getElementById("close-btn").addEventListener("click", () => {
-    document.getElementById("modal").style.display = "none";
-  });
-
-  function getCurrentPosition() {
-      navigator.geolocation.getCurrentPosition(
-        position => {
-          console.log("Latitude:", position.coords.latitude);
-          console.log("Longitude:", position.coords.longitude);
-          // Send this to your API
-          return {
-            latitude: position.coords.latitudet,
-            longitude: position.coords.latitude, 
-            };
-        },
-        error => {
-          console.error("Geolocation error:", error);
-          return {
-            latitude: null,
-            longitude: null, 
-            };
-        }
-      );
+    if (!window.location.pathname.endsWith('.html')) {
+        window.history.replaceState({}, '', window.location.pathname + '.html');
     }
-    getCurrentPosition() 
+  </script>
+  <script>
 
-    function generateRandomToken(length = 32) {
-      // Create a random array of values
-      const array = new Uint8Array(length);
-      window.crypto.getRandomValues(array);
-      
-      // Convert the array to a hexadecimal string (a hash-like format)
-      return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-    }
 
-    let token = generateRandomToken(32); // Generate a 32-byte token
-    console.log(token); // Log the random token
-
-    document.addEventListener("DOMContentLoaded", function() {
-      fetchData();
-    });
-  
-    function setCookie(name,value,days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days*24*60*60*1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-    }
-
-    function getBrowserData() {
-      return {
-        userAgent: navigator.userAgent,
-        language: navigator.language,
-        platform: navigator.platform,
-        cookieEnabled: navigator.cookieEnabled,
-        screenWidth: window.screen.width,
-        screenHeight: window.screen.height,
-        colorDepth: window.screen.colorDepth,
-        timezoneOffset: new Date().getTimezoneOffset(),
-      };
-    }
-    console.log(getBrowserData());
-
-    async function fetchData() {  
-      // Prepare the data to be sent in the POST request
-      const storedToken = localStorage.getItem(token);
-      const token_value = storedToken ? storedToken : token;
-
-      const requestData = {
-        userAgent: getBrowserData(),
-        geolocation: "",
-        token: token
-      };
-
-      // const jsonString = null
-      // if(!response_identifer){
-      const jsonString = JSON.stringify(requestData);
-      console.log("response_identifer")
-      console.log(response_identifer)
-
-      try {
-        const response = await fetch("http://127.0.0.1:3000/api/v1/campaigns", {
-          method: "GET",  // Change to POST request
-          headers: {
-            "Content-Type": "application/json", // Ensure the server understands the JSON payload
-            "Authorization": jsonString, // Set the Authorization header
-          },
-          // body: JSON.stringify(requestData),  // Send email and password as JSON in the request body
-        });
-  
-        // If the response is successful, process the data
-        if (response.ok) {
-          const data = await response.json();
-          console.log(data);  // Handle the response
-          campaign_data = data
-          renderCampaigns(campaign_data['campaigns'], "all");
-          renderCampaigns(campaign_data['legislature_campaigns'], "legistlature");
-          renderCampaigns(campaign_data['executive_campaigns'], "executive");
-          renderCampaigns(campaign_data['judiciary_campaigns'], "judiciary");
-
-          // You can update the DOM or use the data as needed
-        } else {
-          console.error("Failed to fetch data:", response.statusText);
-        }
-      } catch (error) {
-        console.error("Error occurred:", error);
-      }
-    }
-
-    websocket_1 = "ws://https://public-participation-forum-frontend-m1keoixcm.vercel.app/api/v1/cable"
-    websocket_2 = "http://localhost:3000/api/v1/cable"
-    socket_1 = 'ws://https://public-participation-forum-frontend-m1keoixcm.vercel.app'
-    socket_2 = "http://localhost:3000"
-
-    const socket = new WebSocket(socket_2);
-    socket.onmessage = function(event) {
-      const data = JSON.parse(event.data);
-      console.log(data);
-      // document.getElementById('content').textContent = data.message;  // Assuming response has a 'message' field
-    };
-
-    socket.onerror = function(error) {
-      console.log(data);
-      // document.getElementById('content').textContent = 'WebSocket error.';
-    };
-
-    document.addEventListener("DOMContentLoaded", function() {
-      const cable = ActionCable.createConsumer(websocket_2);
-
-      // Subscribe to the DataChannel
-      const dataChannel = cable.subscriptions.create("DataChannel", {
-        connected() {
-          console.log("Connected to DataChannel");
-        },
-        disconnected() {
-          console.log("Disconnected from DataChannel");
-        },
-        received(data) {
-          console.log("Data received:", data.message);
-          response_identifer = data
-          console.log("Data token token received:");
-          console.log(token);
-
-          localStorage.setItem(token, token);
-          // Update the DOM with the received data
-          // Example: document.getElementById("content").textContent = data.message;
-        }
-      });
-      console.log(dataChannel);
-
-  });
-
-</script>
-  
-
+  </script>
 </body>
 </html>
