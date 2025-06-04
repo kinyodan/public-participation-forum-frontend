@@ -286,9 +286,9 @@ async function fetchData() {
 }
 
 websocket_1 = `ws://public-participation-forum-api0ne.onrender.com/api/v1cable?token=${token}`
-websocket_2 = `ws://localhost:3000/api/v1/cable?token=${token}`
-socket_1 = 'ws://public-participation-forum-api0ne.onrender.com/api/v1/cable'
-socket_2 = "ws://localhost:3000"
+websocket_2 = `ws://public-participation-forum-api0ne.onrender.com/api/v1cable?token=${token}`
+socket_1 = `ws://public-participation-forum-api0ne.onrender.com/api/v1cable?token=${token}`
+socket_2 = `ws://public-participation-forum-api0ne.onrender.com/api/v1cable?token=${token}`
 
 const websocket_path = `ws://public-participation-forum-api0ne.onrender.com/api/v1cable?token=${token}` 
 
