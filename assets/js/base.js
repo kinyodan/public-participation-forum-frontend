@@ -287,10 +287,10 @@ async function fetchData() {
 
 websocket_1 = `wss://public-participation-forum-api0ne.onrender.com/api/v1cable?token=${token}`
 websocket_2 = `wss://public-participation-forum-api0ne.onrender.com/api/v1cable?token=${token}`
-socket_1 = `wss://public-participation-forum-api0ne.onrender.com/api/v1cable?token=${token}`
-socket_2 = `wss://public-participation-forum-api0ne.onrender.com/api/v1cable?token=${token}`
+socket_1 = `wss://public-participation-forum-api0ne.onrender.com/api/v1/cable?token=${token}`
+socket_2 = `wss://public-participation-forum-api0ne.onrender.com/api/v1/cable?token=${token}`
 
-const websocket_path = `wss://public-participation-forum-api0ne.onrender.com/api/v1cable?token=${token}` 
+const websocket_path = `wss://public-participation-forum-api0ne.onrender.com/api/v1/cable?token=${token}` 
 
 document.addEventListener("DOMContentLoaded", function() {
   const cable = ActionCable.createConsumer(websocket_path);
