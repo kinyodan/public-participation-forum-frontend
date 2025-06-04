@@ -1,6 +1,6 @@
 
 
-const apiUrl = "http://127.0.0.1:3000/api/v1"
+const apiUrl = "https://public-participation-forum-api0ne.onrender.com/api/v1"
 let p_token = null
 let requestSig = null
 const button = document.getElementById("submitButton");
@@ -256,9 +256,9 @@ async function fetchData() {
   // const jsonString = null
   // if(!response_identifer){
   const jsonString = JSON.stringify(requestData);
-
+  const campaighns_path = `${apiUrl}/campaigns`
   try {
-    const response = await fetch("http://127.0.0.1:3000/api/v1/campaigns", {
+    const response = await fetch(campaighns_path, {
       method: "GET",  // Change to POST request
       headers: {
         "Content-Type": "application/json", // Ensure the server understands the JSON payload
@@ -285,13 +285,16 @@ async function fetchData() {
   }
 }
 
-websocket_1 = "ws://https://public-participation-forum-frontend-m1keoixcm.vercel.app/api/v1/cable"
+
+websocket_1 = `ws://public-participation-forum-api0ne.onrender.com/api/v1cable?token=${token}`
 websocket_2 = `ws://localhost:3000/api/v1/cable?token=${token}`
-socket_1 = 'ws://https://public-participation-forum-frontend-m1keoixcm.vercel.app'
+socket_1 = 'ws://public-participation-forum-api0ne.onrender.com/api/v1/cable'
 socket_2 = "ws://localhost:3000"
 
+const websocket_path = websocket_1 ? websocket_1 : websocket_2
+
 document.addEventListener("DOMContentLoaded", function() {
-  const cable = ActionCable.createConsumer(websocket_2);
+  const cable = ActionCable.createConsumer(websocket_path);
   const channelName = `DataChannel`;  // Construct the dynamic channel name
 
   // Subscribe to the DataChannel
